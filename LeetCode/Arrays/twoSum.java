@@ -1,0 +1,29 @@
+// LC 1 - https://leetcode.com/problems/two-sum/description/
+
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        
+        int[] arr = new int[n];
+        for (int i=0; i<n; i++){
+            arr[i] = sc.nextInt();
+        }
+        
+        int tar = sc.nextInt();
+        for (int i=0; i<n-1; i++){
+            for (int j=i+1; j<n; j++){
+                if (arr[i]+arr[j] == tar){
+                    int[] ans = {i,j};
+                    System.out.println(Arrays.toString(ans));
+                    return;
+                }
+            }
+            sc.close();
+        }
+        System.out.println(-1);
+        
+    }
+}

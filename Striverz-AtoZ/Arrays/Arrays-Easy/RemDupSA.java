@@ -11,6 +11,7 @@ public class RemDupSA {
 
         if (n < 1){
             System.out.println(Arrays.toString(arr));
+            // return;
         }
 
         int idx = 1;
