@@ -2,7 +2,7 @@
 
 import java.util.*;
 
-class Main {
+class spiralMatrix {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
