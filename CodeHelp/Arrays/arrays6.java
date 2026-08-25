@@ -1,4 +1,4 @@
-package Arrays.arraysMedium;
+package Arrays;
 import java.util.*;
 
 public class arrays6 {
