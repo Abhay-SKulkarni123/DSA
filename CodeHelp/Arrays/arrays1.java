@@ -44,6 +44,162 @@ public class arrays1 {
         System.out.println("The Minimum Value of Array : "+ min);
     }
 
+    static void secondLarge (int[] arr){
+        int n = arr.length;
+
+        int largest = Integer.MIN_VALUE;
+        int secondLargest = Integer.MIN_VALUE;
+
+        if (n < 2){
+            System.out.println("Doesn't Exist.");
+        }
+
+        for (int i=0; i<n; i++){
+            if (arr[i] > largest){
+                secondLargest = largest;
+                largest = arr[i];
+            }
+            else if (arr[i] > secondLargest && arr[i] < largest){
+                secondLargest = arr[i];
+            }
+        }
+
+        if (secondLargest == Integer.MIN_VALUE){
+            System.out.println("Doesn't Exist");
+        }
+        else {
+            System.out.println(secondLargest);
+        }
+    }
+
+    static void largeSecondLarge (int[] arr){
+        int n = arr.length;
+
+        int largest = Integer.MIN_VALUE;
+        int secondLargest = Integer.MIN_VALUE;
+
+        if (n < 2){
+            System.out.println("Doesn't Exist.");
+        }
+
+        for (int i=0; i<n; i++){
+            if (arr[i] > largest){
+                secondLargest = largest;
+                largest = arr[i];
+            }
+            else if (arr[i] > secondLargest && arr[i] < largest){
+                secondLargest = arr[i];
+            }
+        }
+
+        if (secondLargest == Integer.MIN_VALUE){
+            System.out.println("Doesn't Exist");
+        }
+        else {
+            System.out.println(largest + " " + secondLargest);
+        }
+    }
+
+    static void secondSmall (int[] arr){
+        int n = arr.length;
+
+        int smallest = Integer.MAX_VALUE;
+        int secondSmallest = Integer.MAX_VALUE;
+
+        if (n < 2){
+            System.out.println("Doesn't Exist.");
+        }
+
+        for (int i=0; i<n; i++){
+            if (arr[i] < smallest){
+                secondSmallest = smallest;
+                smallest = arr[i];
+            }
+            else if (arr[i] < secondSmallest && arr[i] > smallest){
+                secondSmallest = arr[i];
+            }
+        }
+
+        if (secondSmallest == Integer.MAX_VALUE){
+            System.out.println("Doesn't Exist");
+        }
+        else {
+            System.out.println(secondSmallest);
+        }
+    }
+
+    static void smallSecondSmall (int[] arr){
+        int n = arr.length;
+
+        int smallest = Integer.MAX_VALUE;
+        int secondSmallest = Integer.MAX_VALUE;
+
+        if (n < 2){
+            System.out.println("Doesn't Exist.");
+        }
+
+        for (int i=0; i<n; i++){
+            if (arr[i] < smallest){
+                secondSmallest = smallest;
+                smallest = arr[i];
+            }
+            else if (arr[i] < secondSmallest && arr[i] > smallest){
+                secondSmallest = arr[i];
+            }
+        }
+
+        if (secondSmallest == Integer.MAX_VALUE){
+            System.out.println("Doesn't Exist");
+        }
+        else {
+            System.out.println(smallest + " " + secondSmallest);
+        }
+    }
+
+    static void largeSecondLargeSmallSecondSmall (int[] arr){
+        int n = arr.length;
+
+        int largest = Integer.MIN_VALUE;
+        int secondLargest = Integer.MIN_VALUE;
+
+        int smallest = Integer.MAX_VALUE;
+        int secondSmallest = Integer.MAX_VALUE;
+
+        if (n < 2){
+            System.out.println("Doesn't Exist.");
+        }
+
+        for (int i=0; i<n; i++){
+            if (arr[i] > largest){
+                secondLargest = largest;
+                largest = arr[i];
+            }
+            else if (arr[i] > secondLargest && arr[i] < largest){
+                secondLargest = arr[i];
+            }
+        }
+
+        for (int i=0; i<n; i++){
+            if (arr[i] < smallest){
+                secondSmallest = smallest;
+                smallest = arr[i];
+            }
+            else if (arr[i] < secondSmallest && arr[i] > smallest){
+                secondSmallest = arr[i];
+            }
+        }
+
+        if (secondLargest == Integer.MIN_VALUE){
+            System.out.println("Doesn't Exist");
+        }
+        else if (secondSmallest == Integer.MAX_VALUE){
+            System.out.println("Doesn't Exist");
+        }
+        else {
+            System.out.println(largest + " " + secondLargest + " " + smallest + " " + secondSmallest);
+        }
+    }
+
 
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
@@ -59,6 +215,11 @@ public class arrays1 {
         // arrayMulti(arr);
         // arrayMax(arr);
         // arrayMin(arr);
+        // secondLarge(arr);
+        // largeSecondLarge(arr);
+        // secondSmall(arr);
+        // smallSecondSmall(arr);
+        // largeSecondLargeSmallSecondSmall(arr);
         
         sc.close();
     }

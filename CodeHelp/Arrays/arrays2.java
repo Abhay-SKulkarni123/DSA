@@ -72,7 +72,7 @@ public class arrays2 {
         // sum2dArray(arr);
         // multiply2dArray(arr);
         // max2dArray(arr);
-        min2dArray(arr);
+        // min2dArray(arr);
 
         sc.close();
     }

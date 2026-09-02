@@ -2,12 +2,34 @@ package Arrays;
 import java.util.*;
 
 public class arrays3 {
+    static void checkSorted (int[] arr){
+        int n = arr.length;
+        boolean isAsc = true;
+        boolean isDesc = true;
+        for (int i=0; i<n-1; i++){
+            if (arr[i] > arr[i+1]){
+                isAsc = false;
+            }    
+            if (arr[i] < arr[i+1]){
+                isDesc = false;
+            }
+        }
+
+        if (isAsc || isDesc){
+            System.out.println("Sorted");
+        }
+        else {
+            System.out.println("Not Sorted");
+        }
+
+    }
+
     static void avgArray (int[] arr) {
         int sum = 0;
         for (int i=0; i<arr.length; i++){
             sum += arr[i];
         }
-        System.out.print("Average of Array : " + sum / arr.length);
+        System.out.print("Average of Array : " + (double) sum / arr.length);
     }
 
     static void multiArrayEle10 (int[] arr) {
@@ -69,7 +91,8 @@ public class arrays3 {
         // multiArrayEle10(arr);
         // maxArray(arr);
         // sumPN(arr);
-        swapAlt(arr);
+        // swapAlt(arr);        
+        checkSorted (arr);
 
         sc.close();
     }
