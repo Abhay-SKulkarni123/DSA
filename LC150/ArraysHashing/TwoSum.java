@@ -81,6 +81,6 @@ public class TwoSum {
             }
             map.put(arr[i], i);
         }
-        System.out.println("Pair Not Dound.");
+        System.out.println("Pair Not Found.");
     }
 }
