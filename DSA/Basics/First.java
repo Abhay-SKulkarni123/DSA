@@ -138,17 +138,14 @@ public class First {
         int n = sc.nextInt();
         int a = 0;
         int b = 1;
-        if (n <= 0) {
-            System.out.println("Enter a positive number.");
-            return;
+        int count = 2;
+        while(count <= n){
+            int temp = b;
+            b = b + a;
+            a = temp;
+            count++;
         }
-        for (int i = 1; i <= n; i++) {
-            System.out.print(a + " ");
-
-            int next = a + b;
-            a = b;
-            b = next;
-        }
+        System.out.println(b);
     }
 
     static void pal(){
@@ -204,32 +201,37 @@ public class First {
     }
 
     static void Calculator(){
-        long a = sc.nextInt();
-        long b = sc.nextInt();
-
-        String op = sc.nextLine();
-
-        if (op.equals("+")){
-            System.out.println("The Sum of a and b is "+ (a + b));
-        }
-
-        else if (op.equals("-")){
-            System.out.println("The Differnce between a and b is "+ (a - b));
-        }
-
-        else if (op.equals("*")){
-            System.out.println("The Product of a and b is "+ (a * b));
-        }
-
-        else if (op.equals("/")){
-            if (b == 0) {
-                System.out.println("Cannot divide by zero.");
-            } else {
-                System.out.println("The Division of a and b is " + ((double) a / b));
+        long ans = 0;        
+        while(true){
+            char op = sc.next().trim().charAt(0);
+            if (op == '+' || op == '-' || op == '*' || op == '/' || op == '%'){
+                long a = sc.nextInt();
+                long b = sc.nextInt();
+                if (op == '+'){
+                    ans = a + b;
+                }
+                if (op == '-'){
+                    ans = a - b;
+                }
+                if (op == '*'){
+                    ans = a * b;
+                }
+                if (op == '/'){
+                    if(b != 0){
+                        ans = a / b;
+                    }
+                }
+                if (op == '%'){
+                    ans = a % b;
+                }
             }
-        }
-        else{
-            System.out.println("Invalid Operator");
+            else if (op == 'x' || op == 'X'){
+                break;
+            }
+            else {
+                System.out.println("Invaid Operator.");
+            }
+            System.out.println(ans);
         }
     }
 }
